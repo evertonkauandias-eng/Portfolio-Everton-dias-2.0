@@ -2724,3 +2724,350 @@ h2 {
         animation: none;
     }
 }
+
+
+
+/* ==========================================
+   RESPONSIVIDADE COMPLETA — PROJETOS
+   Desktop / Notebook / Tablet / Celular
+========================================== */
+
+/* Evita elementos ultrapassando a tela */
+.projects,
+.project-card,
+.project-visual,
+.project-content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.projects {
+    overflow: hidden;
+}
+
+/* DESKTOP — telas grandes */
+@media (min-width: 1200px) {
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .project-featured {
+        grid-template-columns: 1.1fr 1fr;
+    }
+
+    .project-featured .project-visual {
+        min-height: 410px;
+    }
+
+    .project-visual {
+        min-height: 310px;
+    }
+
+    .project-content {
+        padding: 30px;
+    }
+}
+
+/* NOTEBOOK — telas médias */
+@media (min-width: 851px) and (max-width: 1199px) {
+
+    .project-grid {
+        gap: 16px;
+    }
+
+    .project-featured {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-content {
+        padding: 21px;
+    }
+
+    .project-heading h3 {
+        font-size: 22px;
+    }
+
+    .project-visual {
+        min-height: 280px;
+    }
+
+    .project-featured .project-visual {
+        min-height: 350px;
+    }
+
+    .project-technologies span {
+        font-size: 7px;
+        padding: 6px 7px;
+    }
+}
+
+/* TABLET — até 850px */
+@media (max-width: 850px) {
+
+    .projects-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .projects-intro p {
+        max-width: 550px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .project-featured {
+        grid-column: 1 / -1;
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured .project-visual {
+        min-height: 340px;
+    }
+
+    .project-visual {
+        min-height: 260px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+}
+
+/* CELULAR — até 600px */
+@media (max-width: 600px) {
+
+    .projects {
+        width: 100%;
+        padding-top: 65px;
+        padding-bottom: 65px;
+        overflow: hidden;
+    }
+
+    .projects-intro {
+        margin: 38px 0 35px;
+        gap: 18px;
+    }
+
+    .projects-intro h2 {
+        font-size: clamp(39px, 11vw, 52px);
+        line-height: 1.03;
+    }
+
+    .projects-intro p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .project-card,
+    .project-featured {
+        display: flex;
+        flex-direction: column;
+        grid-column: auto;
+        width: 100%;
+        border-radius: 9px;
+    }
+
+    .project-visual,
+    .project-featured .project-visual {
+        width: 100%;
+        min-height: 235px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 19px;
+    }
+
+    .project-heading h3 {
+        font-size: 21px;
+    }
+
+    .project-description {
+        font-size: 11px;
+        line-height: 1.8;
+        margin: 13px 0 17px;
+    }
+
+    .project-meta {
+        gap: 8px;
+    }
+
+    .project-index,
+    .project-status {
+        font-size: 7px;
+    }
+
+    .project-technologies {
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .project-technologies span {
+        padding: 7px 8px;
+        font-size: 7px;
+    }
+
+    .project-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .project-link {
+        width: 100%;
+        min-height: 45px;
+        font-size: 9px;
+    }
+
+    .stock-preview {
+        width: 90%;
+        max-width: 100%;
+        min-height: 190px;
+        margin-top: 28px;
+    }
+
+    .stock-content {
+        padding: 11px;
+    }
+
+    .stock-heading b {
+        font-size: 10px;
+    }
+
+    .stock-metrics > div {
+        padding: 8px;
+    }
+
+    .stock-metrics b {
+        font-size: 15px;
+    }
+
+    .stock-chart {
+        padding: 9px;
+    }
+
+    .chart-bars {
+        height: 35px;
+    }
+
+    .visual-topbar {
+        left: 15px;
+        right: 15px;
+        top: 17px;
+    }
+
+    .visual-caption {
+        left: 15px;
+        bottom: 13px;
+        font-size: 7px;
+    }
+
+    .portfolio-preview {
+        width: 85%;
+    }
+
+    .browser-body {
+        min-height: 165px;
+        padding: 12px;
+    }
+
+    .browser-hero {
+        margin-top: 20px;
+    }
+
+    .browser-hero b {
+        font-size: 25px;
+    }
+
+    .coming-symbol {
+        width: 55px;
+        height: 55px;
+        font-size: 29px;
+    }
+
+    .coming-content h3 {
+        font-size: 16px;
+    }
+
+    .projects-footer {
+        flex-direction: column;
+        gap: 10px;
+        line-height: 1.8;
+        font-size: 7px;
+    }
+}
+
+/* CELULARES PEQUENOS — até 380px */
+@media (max-width: 380px) {
+
+    .projects-intro h2 {
+        font-size: 37px;
+    }
+
+    .project-content {
+        padding: 16px;
+    }
+
+    .project-heading h3 {
+        font-size: 19px;
+    }
+
+    .project-symbol {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stock-sidebar {
+        width: 29px;
+        padding: 10px 7px;
+    }
+
+    .stock-content {
+        padding: 8px;
+    }
+
+    .stock-metrics small {
+        font-size: 5px;
+    }
+
+    .stock-metrics span {
+        font-size: 6px;
+    }
+
+    .browser-nav {
+        gap: 9px;
+    }
+
+    .browser-hero b {
+        font-size: 22px;
+    }
+}
+
+/* INTERAÇÃO POR TOQUE */
+@media (hover: none) {
+
+    .project-card:hover {
+        transform: none;
+    }
+
+    .project-card:hover .stock-preview,
+    .project-card:hover .portfolio-preview {
+        transform: none;
+    }
+
+    .project-link:hover {
+        transform: none;
+    }
+}
