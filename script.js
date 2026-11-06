@@ -14,3 +14,27 @@ nav.querySelectorAll("a").forEach((link) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+
+/* =====================================
+   INTERAÇÃO DOS PROJETOS
+===================================== */
+
+const projectDetails = document.querySelectorAll(
+    '.project-details'
+);
+
+projectDetails.forEach((detail) => {
+    detail.addEventListener('toggle', () => {
+
+        if (!detail.open) return;
+
+        projectDetails.forEach((otherDetail) => {
+            if (otherDetail !== detail) {
+                otherDetail.open = false;
+            }
+        });
+
+    });
+});
+
